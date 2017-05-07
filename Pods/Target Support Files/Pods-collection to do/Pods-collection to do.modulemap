@@ -1,0 +1,6 @@
+framework module Pods_collection_to_do {
+  umbrella header "Pods-collection to do-umbrella.h"
+
+  export *
+  module * { export * }
+}
