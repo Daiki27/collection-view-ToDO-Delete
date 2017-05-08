@@ -25,18 +25,16 @@ class ListCollectionViewController: UICollectionViewController {
         return todoes.count;
     }
     
-    //データを返すメソッド
+    //データを返すメソッド。セルの中身の表示の仕方の設定。
     func collectionView(collectionView: UICollectionView, cellForRowAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withIdentifier: "Cell") //セルの再利用
-        cell?.textLabel?.text = todoes[indexPath.row].title
-        return cell!
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        as! CollectionViewCell //セルの再利用
         
-        //セルの背景色をランダムに設定する。
-        cell.backgroundColor = UIColor(red: CGFloat(drand48()),
-                                       green: CGFloat(drand48()),
-                                       blue: CGFloat(drand48()),
-                                       alpha: 1.0)
+        cell.titleLabel.text = todoes[indexPath.row].title
+        
+        return cell
+        
     }
 
     //＋ボタンを押した時のメソッド
@@ -48,6 +46,10 @@ class ListCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+       //collectionviewからcellが使えるようにする。
+       let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
+       collectionView?.register(nib, forCellWithReuseIdentifier: "Cell")
     }
     
     //警告を受け取ったときに呼ばれるメソッド
@@ -73,7 +75,7 @@ class ListCollectionViewController: UICollectionViewController {
         self.performSegue(withIdentifier: "toDetail", sender: todoes[indexPath.row])
     }
     
-    
+    //セルの個数の指定
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0
     }
