@@ -20,13 +20,13 @@ class ListCollectionViewController: UICollectionViewController {
     }()
     
     //データの個数を返すメソッド
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section : Int) -> Int
+     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section : Int) -> Int
     {
         return todoes.count;
     }
     
     //データを返すメソッド。セルの中身の表示の仕方の設定。
-    func collectionView(collectionView: UICollectionView, cellForRowAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         as! CollectionViewCell //セルの再利用
@@ -46,7 +46,7 @@ class ListCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+       self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
        //collectionviewからcellが使えるようにする。
        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
@@ -72,15 +72,18 @@ class ListCollectionViewController: UICollectionViewController {
     }
     
     //タップされた時に呼び出されるメソッド
-    func collectionView(_ collectionView: UICollectionView, didSelectRowAt indexPath: IndexPath) {
+      func collectionView(_ collectionView: UICollectionView, didSelectRowAt indexPath: IndexPath) {
         
         self.performSegue(withIdentifier: "toDetail", sender: todoes[indexPath.row])
     }
     
+    
     //セルの個数の指定
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
-    }
+//      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 0
+//    }
+    
+    
 //
 //    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
