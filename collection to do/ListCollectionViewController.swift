@@ -6,12 +6,16 @@
 //  Copyright © 2017年 樋口大樹. All rights reserved.
 //
 
+//タップする→セルを消す/風船が消える（音を鳴らす）→別画面で風船が増える
+//labelをタップしてsave画面に戻る
+
 import UIKit
 import RealmSwift
+//import AVFoundation //タップ
 
 private let reuseIdentifier = "Cell"
 
-class ListCollectionViewController: UICollectionViewController {
+class ListCollectionViewController: UICollectionViewController  {
     
     //個数の変数
     var todoes: Results<ToDo> = {
@@ -20,7 +24,7 @@ class ListCollectionViewController: UICollectionViewController {
     }()
     
     //データの個数を返すメソッド
-     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section : Int) -> Int
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section : Int) -> Int
     {
         return todoes.count;
     }
@@ -54,6 +58,11 @@ class ListCollectionViewController: UICollectionViewController {
         
     }
     
+    //タップ
+//    func tap(_ sender: UITapGestureRecognizer){
+//        
+//    }
+    
     //警告を受け取ったときに呼ばれるメソッド
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -72,12 +81,13 @@ class ListCollectionViewController: UICollectionViewController {
     }
     
     //タップされた時に呼び出されるメソッド
-      func collectionView(_ collectionView: UICollectionView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectRowAt indexPath: IndexPath) {
         
         self.performSegue(withIdentifier: "toDetail", sender: todoes[indexPath.row])
     }
     
     
+
     //セルの個数の指定
 //      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return 0

@@ -11,10 +11,17 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var titleLabel: UILabel!
+    //@IBOutlet var singlerecognizer: UITapGestureRecognizer!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+//        //タップ
+//        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(ListCollectionViewController.tap(_:)))
+//        
+//        //タップ
+//        tapGesture.delegate = self as? UIGestureRecognizerDelegate;
+        
     }
 
 }

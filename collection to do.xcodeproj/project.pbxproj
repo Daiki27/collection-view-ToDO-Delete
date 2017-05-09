@@ -20,6 +20,8 @@
 		0D17325B1EBF7F53003E9F1E /* 風船.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D17325A1EBF7F53003E9F1E /* 風船.jpg */; };
 		0D17325E1EC0104C003E9F1E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D17325C1EC0104C003E9F1E /* CollectionViewCell.swift */; };
 		0D17325F1EC0104C003E9F1E /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D17325D1EC0104C003E9F1E /* CollectionViewCell.xib */; };
+		0D1732741EC2270A003E9F1E /* clapのコピー.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D1732731EC2270A003E9F1E /* clapのコピー.wav */; };
+		0D1732761EC22E17003E9F1E /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D1732751EC22E17003E9F1E /* sky.jpg */; };
 		69853F741300F774E7537FF9 /* Pods_collection_to_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3A8EF52B4B08118F7047FE /* Pods_collection_to_do.framework */; };
 		ACFCA2E6306A2026DCB36785 /* Pods_collection_to_doTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA71B9E04C6E44EE7337C4D /* Pods_collection_to_doTests.framework */; };
 		F36E113C45736CE9C9B4094F /* Pods_collection_to_doUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982335BB7EAF9B57C728CEB3 /* Pods_collection_to_doUITests.framework */; };
@@ -62,6 +64,8 @@
 		0D17325A1EBF7F53003E9F1E /* 風船.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "風船.jpg"; sourceTree = "<group>"; };
 		0D17325C1EC0104C003E9F1E /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		0D17325D1EC0104C003E9F1E /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		0D1732731EC2270A003E9F1E /* clapのコピー.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "clapのコピー.wav"; sourceTree = "<group>"; };
+		0D1732751EC22E17003E9F1E /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
 		1708D0C5E32CC6977AEB08ED /* Pods-collection to do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collection to do.release.xcconfig"; path = "Pods/Target Support Files/Pods-collection to do/Pods-collection to do.release.xcconfig"; sourceTree = "<group>"; };
 		1FA71B9E04C6E44EE7337C4D /* Pods_collection_to_doTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_collection_to_doTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		207DC61B77D17A4B60DB6282 /* Pods-collection to doTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collection to doTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-collection to doTests/Pods-collection to doTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		0D1732231EBEF9DD003E9F1E /* collection to do */ = {
 			isa = PBXGroup;
 			children = (
+				0D1732751EC22E17003E9F1E /* sky.jpg */,
+				0D1732731EC2270A003E9F1E /* clapのコピー.wav */,
 				0D17325A1EBF7F53003E9F1E /* 風船.jpg */,
 				0D1732241EBEF9DD003E9F1E /* AppDelegate.swift */,
 				0D1732261EBEF9DD003E9F1E /* ViewController.swift */,
@@ -302,10 +308,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1732741EC2270A003E9F1E /* clapのコピー.wav in Resources */,
 				0D17322F1EBEF9DD003E9F1E /* LaunchScreen.storyboard in Resources */,
 				0D17322C1EBEF9DD003E9F1E /* Assets.xcassets in Resources */,
 				0D17325B1EBF7F53003E9F1E /* 風船.jpg in Resources */,
 				0D17322A1EBEF9DD003E9F1E /* Main.storyboard in Resources */,
+				0D1732761EC22E17003E9F1E /* sky.jpg in Resources */,
 				0D17325F1EC0104C003E9F1E /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
