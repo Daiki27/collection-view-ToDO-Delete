@@ -45,11 +45,13 @@ class ListCollectionViewController: UICollectionViewController {
     //起動時に一回の処理
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+       //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
        //collectionviewからcellが使えるようにする。
        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
        collectionView?.register(nib, forCellWithReuseIdentifier: "Cell")
+        
     }
     
     //警告を受け取ったときに呼ばれるメソッド
