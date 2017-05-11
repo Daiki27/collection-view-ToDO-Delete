@@ -81,12 +81,22 @@ class ListCollectionViewController: UICollectionViewController  {
     }
     
     //タップされた時に呼び出されるメソッド
-    func collectionView(_ collectionView: UICollectionView, didSelectRowAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView,  didSelectItemAt indexPath: IndexPath) {
         
         self.performSegue(withIdentifier: "toDetail", sender: todoes[indexPath.row])
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
+            if segue.identifier == "toDetail" {
+    
+                let controller = segue.destination as! DetailViewController
+                if let todo = sender as? ToDo {
+                    controller.todo = todo
+                }
+            }
+        }
+
 
     //セルの個数の指定
 //      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
