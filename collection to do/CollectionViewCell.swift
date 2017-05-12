@@ -11,17 +11,23 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var titleLabel: UILabel!
-    //@IBOutlet var singlerecognizer: UITapGestureRecognizer!
+    //@IBOutlet var myImageView: UIImageView! //タップの関連付け
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-//        //タップ
-//        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(ListCollectionViewController.tap(_:)))
-//        
-//        //タップ
-//        tapGesture.delegate = self as? UIGestureRecognizerDelegate;
-        
     }
+    
+    //ダブルタップの為の準備
+//    func viewDidLoad() {
+//        let doubleTapGesture = UITapGestureRecognizer(target: self, action:#selector(self.doubleTap))
+//        doubleTapGesture.numberOfTapsRequired = 2
+//        self.myImageView.addGestureRecognizer(doubleTapGesture)
+//    }
+    
+    //ダブルタップされた時の処理
+//    func doubleTap(gesture: UITapGestureRecognizer) -> Void {
+//        
+//    }
+    
 
 }

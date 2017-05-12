@@ -86,16 +86,19 @@ class ListCollectionViewController: UICollectionViewController  {
         self.performSegue(withIdentifier: "toDetail", sender: todoes[indexPath.row])
     }
     
+    //タップした時にラベルに保存されたデータを表示する。
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
             if segue.identifier == "toDetail" {
-    
                 let controller = segue.destination as! DetailViewController
                 if let todo = sender as? ToDo {
                     controller.todo = todo
                 }
             }
         }
+    
+}
+
 
 
     //セルの個数の指定
@@ -112,4 +115,4 @@ class ListCollectionViewController: UICollectionViewController  {
 //    }
 
 
-}
+

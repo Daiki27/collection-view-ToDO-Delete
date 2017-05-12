@@ -28,6 +28,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="風船.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-6w-sRD">
                         <rect key="frame" x="15" y="29" width="124" height="120"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <gestureRecognizers/>
                     </imageView>
                 </subviews>
             </view>
